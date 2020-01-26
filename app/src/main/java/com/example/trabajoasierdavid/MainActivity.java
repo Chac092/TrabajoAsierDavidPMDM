@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.annotations.Marker;
@@ -35,8 +36,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     EditText latitud;
     EditText longitud;
     Marker marcador;
-
-
+    boolean marcadorPuesto = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,13 +78,20 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         insertar.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                mapboxMap.removeMarker(marcador);
-                                double Latitud = Double.parseDouble(latitud.getText().toString());
-                                double Longitud = Double.parseDouble(longitud.getText().toString());
-                                String Nombre = nombre.getText().toString();
-                                marcador = mapboxMap.addMarker(new MarkerOptions().
-                                        position(new LatLng(Latitud, Longitud))
-                                        .title(Nombre));
+                                if(marcadorPuesto){
+                                    mapboxMap.removeMarker(marcador);
+                                }
+                                try{
+                                    double Latitud = Double.parseDouble(latitud.getText().toString());
+                                    double Longitud = Double.parseDouble(longitud.getText().toString());
+                                    String Nombre = nombre.getText().toString();
+                                    marcador = mapboxMap.addMarker(new MarkerOptions().
+                                            position(new LatLng(Latitud, Longitud))
+                                            .title(Nombre));
+                                    marcadorPuesto = true;
+                                }catch (Exception e){
+                                    Toast.makeText(getApplicationContext(),"Porfavor inserte caracteres validos, En caso de poner la latitud o longitud con una , sustituyala por un .",Toast.LENGTH_LONG).show();
+                                }
 
                             }
                         });
@@ -148,6 +155,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onDestroy();
         mapView.onDestroy();
     }
+
     @Override
     public void onMapReady(MapboxMap mapa) {
         mapboxMap = mapa;

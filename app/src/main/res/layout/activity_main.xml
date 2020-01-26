@@ -73,23 +73,21 @@
         android:id="@+id/editLatitud"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintBottom_toBottomOf="@id/guiahorizontal3"
         app:layout_constraintEnd_toEndOf="@id/guiavertical7"
         app:layout_constraintStart_toStartOf="@id/guiavertical4"
-        app:layout_constraintTop_toTopOf="@id/guiahorizontal2"
-         />
+        app:layout_constraintTop_toTopOf="@id/guiahorizontal2" />
 
     <EditText
         android:id="@+id/editLongitud"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:inputType="number"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintBottom_toBottomOf="@id/guiahorizontal4"
         app:layout_constraintEnd_toEndOf="@id/guiavertical7"
         app:layout_constraintStart_toStartOf="@id/guiavertical4"
-        app:layout_constraintTop_toTopOf="@id/guiahorizontal3"
-        />
+        app:layout_constraintTop_toTopOf="@id/guiahorizontal3" />
 
     <EditText
         android:id="@+id/nombre"
