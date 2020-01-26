@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TrabajoAsierDavid</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiY2hhYzA5IiwiYSI6ImNrNXRveG9kZjBuY2czcGxvbXVtZWV3ZDUifQ.aD8dYWMbJBklhydPPXWj5g</string>
+
+    <string name="texto1">Parque Europa desde el este</string>
+    <string name="texto2">Parque Europa desde el sudeste</string>
+    <string name="texto3">Parque Europa desde el sur</string>
+    <string name="texto4">Parque Europa, rotonda</string>
+    <string name="texto5">El insituto, fuente de gozo</string>
+    <string name="texto6">Arbustos grandes.</string>
+
+</resources>

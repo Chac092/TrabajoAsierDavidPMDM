@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mostrarLugar">
+
+    <TextView
+        android:id="@+id/textLugar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=" fbhkjfbihlobfilhbflikhfblifbifbifbiufbfbfiofbiyfbiofpbpifbifpybipfybipfubipufbiufbfiubfiopuhbfuopibfpiubfpibfpibfpiufbuipfbufuibfuibfipuibfpbiuf"
+        app:layout_constraintBottom_toBottomOf="@id/guiahorizontal2"
+        app:layout_constraintEnd_toEndOf="@id/guiavertical4"
+        app:layout_constraintStart_toStartOf="@id/guiavertical1"
+        app:layout_constraintTop_toTopOf="@id/guiahorizontal1"
+        />
+
+    <ImageView
+        android:id="@+id/imageImagen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guiahorizontal4"
+        app:layout_constraintEnd_toEndOf="@id/guiavertical4"
+        app:layout_constraintStart_toStartOf="@id/guiavertical1"
+        app:layout_constraintTop_toTopOf="@id/guiahorizontal2"
+        app:srcCompat="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/atras"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Atras"
+        app:layout_constraintBottom_toBottomOf="@id/guiahorizontal6"
+        app:layout_constraintEnd_toEndOf="@id/guiavertical3"
+        app:layout_constraintStart_toStartOf="@id/guiavertical2"
+        app:layout_constraintTop_toTopOf="@id/guiahorizontal5"
+         />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiavertical1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.11192214" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiavertical4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.890511" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiavertical2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30656934" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiavertical3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.649635" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiahorizontal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiahorizontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23255815" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiahorizontal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34336525" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiahorizontal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.751026" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiahorizontal5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiahorizontal6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9151847" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
