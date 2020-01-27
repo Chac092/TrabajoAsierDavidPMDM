@@ -20,6 +20,8 @@ import android.widget.Toast;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.annotations.Marker;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
@@ -88,6 +90,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                     marcador = mapboxMap.addMarker(new MarkerOptions().
                                             position(new LatLng(Latitud, Longitud))
                                             .title(Nombre));
+                                    CameraPosition posicion = new CameraPosition.Builder().target(marcador.getPosition()).build();
+                                    mapboxMap.animateCamera(CameraUpdateFactory.newCameraPosition(posicion));
                                     marcadorPuesto = true;
                                 }catch (Exception e){
                                     Toast.makeText(getApplicationContext(),"Porfavor inserte caracteres validos, En caso de poner la latitud o longitud con una , sustituyala por un .",Toast.LENGTH_LONG).show();
