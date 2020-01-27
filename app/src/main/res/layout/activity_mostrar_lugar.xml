@@ -10,7 +10,10 @@
         android:id="@+id/textLugar"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text=" fbhkjfbihlobfilhbflikhfblifbifbifbiufbfbfiofbiyfbiofpbpifbifpybipfybipfubipufbiufbfiubfiopuhbfuopibfpiubfpibfpibfpiufbuipfbufuibfuibfipuibfpbiuf"
+        android:autoSizeMinTextSize="12dp"
+        android:autoSizeMaxTextSize="120dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@id/guiahorizontal2"
         app:layout_constraintEnd_toEndOf="@id/guiavertical4"
         app:layout_constraintStart_toStartOf="@id/guiavertical1"
@@ -31,12 +34,12 @@
         android:id="@+id/atras"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#A09B9B"
         android:text="Atras"
         app:layout_constraintBottom_toBottomOf="@id/guiahorizontal6"
         app:layout_constraintEnd_toEndOf="@id/guiavertical3"
         app:layout_constraintStart_toStartOf="@id/guiavertical2"
-        app:layout_constraintTop_toTopOf="@id/guiahorizontal5"
-         />
+        app:layout_constraintTop_toTopOf="@id/guiahorizontal5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guiavertical1"

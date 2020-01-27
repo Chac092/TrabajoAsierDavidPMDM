@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
+//En esta activity crearemos los 6 tipos de lugares con un objeto que contenga las imagenes y textos y despues las mostraremos de manera totalmente aleatoria.
 public class mostrarLugar extends AppCompatActivity {
     TextView texto;
     ImageView imagen;
@@ -22,12 +22,15 @@ public class mostrarLugar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_lugar);
         crearLugares();
-        double numrandom = Math.random()*6;
-        texto = findViewById(R.id.textLugar);
-        texto.setText(Lugares.get((int)numrandom).Texto);
+        double numrandom = Math.random()*6;//El numero se genera automaticamente
+        //Los atributos se enlazan a sus correspondientes elementos
         imagen = findViewById(R.id.imageImagen);
-        imagen.setImageDrawable(Lugares.get((int)numrandom).Imagen);
+        texto = findViewById(R.id.textLugar);
         Atras = findViewById(R.id.atras);
+        //Cargamos la imagen y el texto aleatorio en los elementos
+        texto.setText(Lugares.get((int)numrandom).Texto);//
+        imagen.setImageDrawable(Lugares.get((int)numrandom).Imagen);
+        //Este es un listener a un boton que nos devolvera a la pantalla principal
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +39,7 @@ public class mostrarLugar extends AppCompatActivity {
             }
         });
     }
+    //En esta clase lo que haremos sera crear los 6 lugares y meterlos en un arraylist para usarlos despues
     public void crearLugares(){
         Lugar L1 = new Lugar(getResources().getString(R.string.texto1),getResources().getDrawable(R.drawable.foto1));
         Lugar L2 = new Lugar(getResources().getString(R.string.texto2),getResources().getDrawable(R.drawable.foto2));
@@ -51,6 +55,8 @@ public class mostrarLugar extends AppCompatActivity {
         Lugares.add(L6);
     }
 
+    //Este es el objeto Lugar con el que creaemos los 6 lugares
+    //en este objeto tendremos la imagen y su texto correspondiente
     public class Lugar{
         String Texto;
         Drawable Imagen;
